@@ -56,7 +56,7 @@ def grailsLocalRepo = hasProperty('grailsLocalRepo') ? grailsLocalRepo : 'grails
 def grailsCentral = hasProperty('disableGrailsCentral') && disableGrailsCentral=='true' ? "-Ddisable.grails.central=${disableGrailsCentral}" : "-Dgrails.central.url=${grailsCentralUrl}"
 def grailsDownloadUrl = "http://dist.springframework.org.s3.amazonaws.com/release/GRAILS/grails-${grailsVersion}.zip"
 def grailsHome = "${grailsInstallLocation}/${grailsBaseName}"
-def grailsCommandLine = "${grailsHome}/bin/grails"
+def grailsCommandLine = "${grailsHome}/bin/grails.bat"
 def mavenCredsDefined = hasProperty('mavenUser') && hasProperty('mavenPassword') && hasProperty('mavenRealm') && hasProperty('mavenHost')
 def mavenCreds = mavenCredsDefined ? "-Dmaven.user=${mavenUser} -Dmaven.password=${mavenPassword} -Dmaven.realm=${mavenRealm} -Dmaven.host=${mavenHost}" : ''
 def warFileName = "rundeck-${version}.war"
