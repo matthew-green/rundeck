@@ -37,6 +37,14 @@
 <g:set var="appId" value="${g.appTitle()}"/>
 
 
+<g:if test="${grailsApplication.config.rundeck?.gui?.minimumFooter in [true, 'true']}">
+    <div class="row row-space">
+        <div class="col-sm-12">
+            ${grailsApplication.config.rundeck?.gui?.title ?: g.message(code: 'main.app.name',default:'This site')} is powered by Rundeck &copy; Copyright 2017
+        </div>
+    </div>
+</g:if>
+<g:else>
 <div class="row row-space">
     <div class="col-sm-3  ">
 
@@ -64,3 +72,4 @@
         </a>
     </div>
 </div>
+</g:else>
