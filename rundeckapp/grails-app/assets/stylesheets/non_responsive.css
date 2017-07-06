@@ -106,6 +106,7 @@ via: http://twbs.github.io/bootstrap/examples/non-responsive/
     color: #333;
 }
 
+/*
 .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
 .navbar .navbar-nav .open .dropdown-menu > li > a:focus,
 .navbar .navbar-nav .open .dropdown-menu > .active > a,
@@ -114,6 +115,7 @@ via: http://twbs.github.io/bootstrap/examples/non-responsive/
     color: #fff !important;
     background-color: #428bca !important;
 }
+*/
 
 .navbar .navbar-nav .open .dropdown-menu > .disabled > a,
 .navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,

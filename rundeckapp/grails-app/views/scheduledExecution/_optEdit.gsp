@@ -63,6 +63,7 @@
                     from="${[
                     [key:'',value:message(code:'form.option.optionType.text.label')],
                     [key:'file',value:message(code:'form.option.optionType.file.label')],
+                    [key:'textarea',value:message(code:'form.option.optionType.textarea.label')],
                     ]
                     }"
                         id="opttype_${rkey}">

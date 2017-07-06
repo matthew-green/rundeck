@@ -4,6 +4,10 @@
 <!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"><!--<![endif]-->
+
+<g:set var="favicon" value="${grailsApplication.config.rundeck.gui.favicon ? grailsApplication.config.rundeck.gui.favicon : 'favicon-152.png'}"/>
+<g:set var="shortcuticon" value="${grailsApplication.config.rundeck.gui.shortcuticon ? grailsApplication.config.rundeck.gui.shortcuticon : 'favicon-152.png'}"/>
+
 <head>
     <title>
         %{--
@@ -22,15 +26,15 @@
   - limitations under the License.
   --}%
 
-<g:layoutTitle default="${g.appTitle()}"/>
+<g:layoutTitle default="${g.appTitle()}"/> - foob
     </title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="SHORTCUT" href="${g.resource(dir: 'images', file: 'favicon-152.png')}"/>
-    <link rel="favicon" href="${g.resource(dir: 'images', file: 'favicon-152.png')}"/>
-    <link rel="shortcut icon" href="${g.resource(dir: 'images', file: 'favicon.ico')}"/>
-    <link rel="apple-touch-icon-precomposed" href="${g.resource(dir: 'images', file: 'favicon-152.png')}"/>
+    <link rel="SHORTCUT" href="${g.resource(dir: 'images', file: favicon)}"/>
+    <link rel="favicon" href="${g.resource(dir: 'images', file: favicon)}"/>
+    <link rel="shortcut icon" href="${g.resource(dir: 'images', file: shortcuticon)}"/>
+    <link rel="apple-touch-icon-precomposed" href="${g.resource(dir: 'images', file: favicon)}"/>
     <asset:stylesheet href="rundeck.css"/>
     <asset:stylesheet href="ansicolor.css"/>
     <asset:stylesheet href="non_responsive.css"/>
