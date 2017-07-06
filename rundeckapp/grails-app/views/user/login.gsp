@@ -4,6 +4,10 @@
 <!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"><!--<![endif]-->
+
+<g:set var="favicon" value="${grailsApplication.config.rundeck.gui.favicon ? grailsApplication.config.rundeck.gui.favicon : 'favicon-152.png'}"/>
+<g:set var="shortcuticon" value="${grailsApplication.config.rundeck.gui.shortcuticon ? grailsApplication.config.rundeck.gui.shortcuticon : 'favicon-152.png'}"/>
+
 <head>
     <title>%{--
   - Copyright 2016 SimplifyOps, Inc. (http://simplifyops.com)
@@ -20,15 +24,14 @@
   - See the License for the specific language governing permissions and
   - limitations under the License.
   --}%
-
-<g:appTitle/> - Login</title>
+<g:appTitle/> - Login - flub</title>
     <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
     <META HTTP-EQUIV="Expires" CONTENT="-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="SHORTCUT" href="${g.resource(dir: 'images', file: 'favicon-152.png')}"/>
-    <link rel="favicon" href="${g.resource(dir: 'images', file: 'favicon-152.png')}"/>
-    <link rel="shortcut icon" href="${g.resource(dir: 'images', file: 'favicon.ico')}"/>
-    <link rel="apple-touch-icon-precomposed" href="${g.resource(dir: 'images', file: 'favicon-152.png')}"/>
+    <link rel="SHORTCUT" href="${g.resource(dir: 'images', file: favicon)}"/>
+    <link rel="favicon" href="${g.resource(dir: 'images', file: favicon)}"/>
+    <link rel="shortcut icon" href="${g.resource(dir: 'images', file: shortcuticon)}"/>
+    <link rel="apple-touch-icon-precomposed" href="${g.resource(dir: 'images', file: favicon)}"/>
     <asset:stylesheet href="rundeck.css"/>
     <!--[if lt IE 9]>
     <g:javascript library="respond.min"/>

@@ -22,15 +22,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 
+<g:set var="favicon" value="${grailsApplication.config.rundeck.gui.favicon ? grailsApplication.config.rundeck.gui.favicon : 'favicon-152.png'}"/>
+<g:set var="shortcuticon" value="${grailsApplication.config.rundeck.gui.shortcuticon ? grailsApplication.config.rundeck.gui.shortcuticon : 'favicon-152.png'}"/>
+
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head><title><g:appTitle/> - Logged Out</title>
     <meta name="layout" content="base"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="SHORTCUT" href="${g.resource(dir: 'images', file: 'favicon-152.png')}"/>
-    <link rel="favicon" href="${g.resource(dir: 'images', file: 'favicon-152.png')}"/>
-    <link rel="shortcut icon" href="${g.resource(dir: 'images', file: 'favicon.ico')}"/>
-    <link rel="apple-touch-icon-precomposed" href="${g.resource(dir: 'images', file: 'favicon-152.png')}"/>
+    <link rel="SHORTCUT" href="${g.resource(dir: 'images', file: favicon)}"/>
+    <link rel="favicon" href="${g.resource(dir: 'images', file: favicon)}"/>
+    <link rel="shortcut icon" href="${g.resource(dir: 'images', file: shortcuticon)}"/>
+    <link rel="apple-touch-icon-precomposed" href="${g.resource(dir: 'images', file: favicon)}"/>
     <asset:stylesheet href="rundeck.css"/>
     <!--[if lt IE 9]>
     <g:javascript library="respond.min"/>
