@@ -58,7 +58,7 @@
 <div data-bind="if: projectCount()>0 || !loadedProjectNames()">
     <div class="row row-space">
 
-        <g:if test="${isFirstRun}">
+        <g:if test="${isFirstRun && !grailsApplication.config.rundeck?.gui?.autohideAlert in [true, 'true']}">
             <div class="col-sm-12">
                 <div class="alert alert-dismissable alert-welcome">
                     <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>

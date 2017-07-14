@@ -63,6 +63,19 @@
     <div class="container">
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav">
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown">
+            DCInfo Apps <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="/TNIConfigBrowser/" target="_blank">Config Browser <i class="glyphicon glyphicon-new-window"></i></a></li>
+            <li><a href="/log-search/" target="_blank">Log Search <i class="glyphicon glyphicon-new-window"></i></a></li>
+            <li><a href="/metric-graphs/" target="_blank">Metric Graphs <i class="glyphicon glyphicon-new-window"></i></a></li>
+            <li><a href="/report-server/" target="_blank">Report Server <i class="glyphicon glyphicon-new-window"></i></a></li>
+            <li><a href="/service-console/" target="_blank">Service Console <i class="glyphicon glyphicon-new-window"></i></a></li>
+            <li><a href="/web-stats/" target="_blank">Web Stats <i class="glyphicon glyphicon-new-window"></i></a></li>
+        </ul>
+    </li>
 <g:if test="${session?.user && request.subject }">
     <g:set var="homeselected" value="${false}"/>
     <g:if test="${request.getAttribute(RequestConstants.PAGE)}">
