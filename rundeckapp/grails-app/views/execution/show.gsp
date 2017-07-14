@@ -190,6 +190,11 @@
         }
         jQuery(init);
       </g:javascript>
+      <g:if test="${execution.executionState=='failed'}">
+          <g:javascript>
+          jQuery('#tab_link_output').trigger('show.bs.tab');
+          </g:javascript>
+      </g:if>
 
       <g:if test="${grails.util.Environment.current==grails.util.Environment.DEVELOPMENT}">
           <asset:javascript src="workflow.test.js"/>
@@ -598,6 +603,8 @@
                 <div class="col-sm-12">
                     <g:render template="/common/messages"/>
                     <ul class="nav nav-tabs">
+                        <!-- TODO: set active for summary unless job failed, then set output to active -->
+                        <span style="display:none">e.es: ${enc(attr:execution.executionState)}</span>
                         <li id="tab_link_summary" class="active">
                             <a href="#summary" data-toggle="tab"><g:message code="execution.page.show.tab.Summary.title" /></a>
                         </li>
@@ -709,6 +716,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="tab-content">
+                <!-- TODO: set active for summary unless job failed, then set output to active -->
                 <div class="tab-pane active" id="summary">
                     <g:render template="wfstateSummaryDisplay" bean="${workflowState}" var="workflowState"/>
                 </div>
@@ -717,7 +725,7 @@
                        <g:render template="wfstateNodeModelDisplay" bean="${workflowState}" var="workflowState"/>
                     </div>
                 </div>
-                <div class="tab-pane " id="output">
+                <div class="tab-pane" id="output">
                     <g:render template="/execution/showFragment"
                               model="[execution: execution, scheduledExecution: scheduledExecution, inlineView: false, followmode: followmode]"/>
                 </div>
