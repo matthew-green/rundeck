@@ -49,6 +49,7 @@
     <asset:javascript src="bootstrap.js"/>
     <asset:javascript src="prototype.min.js"/>
     <asset:javascript src="application.js"/>
+    <asset:javascript src="location-message.js"/>
     <g:render template="/common/js"/>
     <g:render template="/common/css"/>
 
